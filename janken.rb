@@ -23,7 +23,7 @@ class Janken_acchimuite
   #勝ち
   elsif(player_hand == 0 && program_hand == 1)||(player_hand == 1 && program_hand == 2)||(player_hand == 2 && program_hand == 0)
    @janken_result = "janken_result_win"
-   puts "あなたの勝ちです"
+   puts "じゃんけんはあなたの勝ちです"
    next_game
    return false
   
@@ -31,7 +31,7 @@ class Janken_acchimuite
   #負け
   elsif(player_hand == 0 && program_hand == 2)||(player_hand == 1 && program_hand == 0)||(player_hand ==2 && program_hand == 1)
    @janken_result = "janken_result_lose"
-   puts "あなたの負けです"
+   puts "じゃんけんはあなたの負けです"
    next_game
    return false
   
@@ -59,6 +59,7 @@ class Janken_acchimuite
     #勝ち
     if player_choice == program_choice
       puts "あなたの勝ちです"
+      exit
     
     #続行
     else
@@ -66,7 +67,7 @@ class Janken_acchimuite
      janken
      continue_game = true
      while continue_game
-       continue_game = Janken
+       continue_game = janken
      end
   
     end
@@ -79,6 +80,7 @@ class Janken_acchimuite
     #負け
     if player_choice == program_choice
       puts "あなたの負けです"
+      exit
     
     #続行
     else
@@ -86,7 +88,7 @@ class Janken_acchimuite
      janken
      continue_game = true
      while continue_game
-       continue_game = Janken
+       continue_game = janken
      end
        
     end
